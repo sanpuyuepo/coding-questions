@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounce</title>
+</head>
+
+<body>
+  <button id="btn">Button</button>
+  <script src="./main.js"></script>
+  <script>
+    const buttonElm = document.querySelector('#btn');
+
+    // const handler = (e) => {
+    //   console.log('clicked...');
+    //   console.log(this);
+    //   console.log(e);
+    // }
+
+    function handler(e) {
+      console.log('clicked...');
+      console.log(this);
+      console.log(e);
+    }
+
+    // buttonElm.addEventListener('click', handler)
+    // buttonElm.addEventListener('click', debounce(handler, 1000))
+    buttonElm.addEventListener('click', debounce2(handler, 1000))
+    // buttonElm.addEventListener('click', debounce3(handler, 1000, true))
+  </script>
+</body>
+
+</html>
